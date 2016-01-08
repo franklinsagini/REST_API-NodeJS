@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var bookModel = new Schema({
+var bookSchema = new Schema({
     title: {
         type: String
     },
@@ -10,4 +10,4 @@ var bookModel = new Schema({
     read: {type: Boolean, default:false}
 });
 
-module.exports = mongoose.model('Book', bookModel);
+module.exports = mongoose.model('Book', bookSchema);

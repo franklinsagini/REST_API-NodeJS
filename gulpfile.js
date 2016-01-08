@@ -2,7 +2,8 @@
  * Created by Frank on 10/26/2015.
  */
 var gulp = require('gulp'),
-    nodemon = require('gulp-nodemon');
+    nodemon = require('gulp-nodemon'),
+    mocha = require('gulp-mocha');
 
     gulp.task('default',function(){
         nodemon({
@@ -15,6 +16,11 @@ var gulp = require('gulp'),
         })
         .on('restart',function(){
             var time = new Date();
-           console.log('restarting'+time);
+           console.log('restarting');
         });
+    });
+
+    gulp.task('test',function(){
+        gulp.src('tests/*.js',{read:false})
+            .pipe(mocha({reporter:'nyan'}))
     });

@@ -11,6 +11,13 @@
   "dependencies": {
     "express": "^4.11.2",
     "gulp": "^3.9.0",
-    "gulp-nodemon": "^2.0.4"
+    "gulp-mocha": "^2.2.0",
+    "gulp-nodemon": "^2.0.4",
+    "should": "^8.0.2",
+    "sinon": "^1.17.2"
+  },
+  "devDependencies": {
+    "gulp-env": "^0.4.0",
+    "supertest": "^1.1.0"
   }
 }
